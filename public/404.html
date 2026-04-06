@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 — Page Not Found</title>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        font-family: 'Inter', system-ui, sans-serif;
+        overflow: hidden;
+        position: relative;
+        background: #f0f4ff;
+      }
+      .bg {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .bg img {
+        width: auto;
+        height: auto;
+        max-height: 100vh;
+        object-fit: contain;
+      }
+      .bg-fade {
+        position: absolute;
+        inset-x: 0; bottom: 0;
+        height: 40%;
+        background: linear-gradient(to top, rgba(240,244,255,0.97) 60%, transparent 100%);
+      }
+      .pokeball {
+        position: fixed;
+        border-radius: 50%;
+        background: linear-gradient(180deg,#ef4444 50%,#fff 50%);
+        opacity: 0.3;
+        animation: spin 8s linear infinite;
+        pointer-events: none;
+        z-index: 2;
+      }
+      .pokeball.tl { width:48px;height:48px;top:2.5rem;left:2.5rem;border:3px solid #d1d5db;animation-duration:6s;animation-direction:reverse; }
+      .pokeball.br { width:80px;height:80px;bottom:2.5rem;right:2.5rem;border:4px solid #d1d5db; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .box {
+        position: relative;
+        z-index: 3;
+        margin: 0 1.5rem 2.5rem;
+        padding: 1.75rem 2rem;
+        border-radius: 1.5rem;
+        background: rgba(255,255,255,0.85);
+        border: 1px solid rgba(0,0,0,0.08);
+        backdrop-filter: blur(24px);
+        box-shadow: 0 -4px 40px rgba(0,0,0,0.08), 0 2px 20px rgba(124,58,237,0.08);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 1.5rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .info { flex: 1; text-align: left; }
+      h1 {
+        font-size: 4.5rem;
+        font-weight: 900;
+        background: linear-gradient(135deg,#a78bfa,#e879f9,#22d3ee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1;
+        margin-bottom: 0.25rem;
+      }
+      h2 { font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.25rem; }
+      p  { color: #4b5563; font-size: 0.875rem; line-height: 1.5; }
+      p small { color: #9ca3af; font-size: 0.75rem; }
+      a {
+        flex-shrink: 0;
+        padding: 0.75rem 2rem;
+        border-radius: 1rem;
+        background: linear-gradient(135deg,#7c3aed,#06b6d4);
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.875rem;
+        text-decoration: none;
+        white-space: nowrap;
+        box-shadow: 0 0 28px rgba(124,58,237,0.35);
+        transition: transform 0.2s, filter 0.2s;
+      }
+      a:hover { transform: scale(1.05); filter: brightness(1.1); }
+      @media (max-width: 540px) {
+        .box { flex-direction: column; align-items: stretch; }
+        a { text-align: center; }
+      }
+    </style>
+  <script>
+    // GitHub Pages SPA redirect — encode the path and send to index.html
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 2).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(1).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+  </head>
+  <body>
+    <div class="bg">
+      <img src="/404.png" alt="Pikachu using Iron Tail" />
+      <div class="bg-fade"></div>
+    </div>
+    <div class="pokeball tl"></div>
+    <div class="pokeball br"></div>
+    <div class="box">
+      <div class="info">
+        <h1>404</h1>
+        <h2>Oops! Page not found</h2>
+        <p>⚡ Looks like it got zapped out of existence<br></p>
+      </div>
+      <a href="/">← Back to Home</a>
+    </div>
+  </body>
+</html>
