@@ -2,18 +2,6 @@
 
 A personal portfolio website built with React, showcasing my projects, skills, experience, and education.
 
-## Tech Stack
-
-- **React 18** — component-based UI
-- **Vite** — fast dev server and build tool
-- **Tailwind CSS** — utility-first styling
-- **Framer Motion** — animations and transitions
-- **React Three Fiber / Drei** — 3D elements
-- **Firebase** — backend/data
-- **EmailJS** — contact form
-- **React Router** — client-side routing
-- **Vercel Analytics** — usage analytics
-
 ## Getting Started
 
 1. Clone the repository:
@@ -42,19 +30,9 @@ npm run build
 
 Output is placed in the `dist/` folder.
 
-## Sections
-
-- **Hero** — introduction and call to action
-- **About** — background and summary
-- **Technologies** — skills and tools
-- **Experience** — work and internship history
-- **Education** — academic background
-- **Projects** — featured work
-- **Contact** — reach out form
-
 ## Contact
 
-Questions or feedback? Reach me at [sairithwik0108@gmail.com](mailto:sairithwik0108@gmail.com).
+Questions or feedback? Reach me at [sairithwikkukunuri@gmail.com](mailto:sairithwikkukunuri@gmail.com).
 
 ## License
 
