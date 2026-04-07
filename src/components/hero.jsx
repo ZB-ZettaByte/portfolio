@@ -109,7 +109,7 @@ const Hero = () => {
               <FaDownload className="text-xs" />
               Download Resume
             </button>
-            <              a href="https://github.com/YB-Yottabyte" target="_blank" rel="noopener noreferrer"
+            <              a href="https://github.com/ZB-ZettaByte" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold text-sm border transition-all duration-300"
               style={{ color: isLight ? '#374151' : '#cbd5e1', borderColor: isLight ? 'rgba(0,0,0,0.12)' : 'rgba(255,255,255,0.1)', background: 'transparent' }}>
               <FaGithub className="text-xs" /> GitHub
